@@ -1,4 +1,4 @@
-package com.pluralsight.dealership.CarDealershipAPI.controller;
+package com.pluralsight.dealership.CarDealershipAPI;
 
 public class LeaseContractController {
 
