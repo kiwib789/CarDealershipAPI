@@ -8,7 +8,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import static com.pluralsight.dealership.DatabaseConfig.dataSource;
+
 @Component
 public class LeaseDaoImpl implements LeaseDao {
     private final DataSource dataSource;
