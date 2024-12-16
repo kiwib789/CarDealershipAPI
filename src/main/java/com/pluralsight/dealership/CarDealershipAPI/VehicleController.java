@@ -13,7 +13,7 @@ import java.util.List;
 @RequestMapping (path = "/vehicles")
 public class VehicleController {
 
-    private VehicleDao vehicleDAO;
+    private final VehicleDao vehicleDAO;
 
     // constructor to inject the VehicleDao dependency using @Autowired.
     @Autowired

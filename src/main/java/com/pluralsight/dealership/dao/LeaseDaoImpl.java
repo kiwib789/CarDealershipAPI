@@ -7,6 +7,7 @@ import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.List;
 
 
 @Component
@@ -44,5 +45,17 @@ public class LeaseDaoImpl implements LeaseDao {
             throw new RuntimeException();
         }
     }
+
+    @Override
+    public List<LeaseContract> findLeaseContractByVin(int vin) {
+        return List.of();
+    }
+
+    @Override
+    public LeaseContract addLeaseContract(LeaseContract leaseContract) {
+        return null;
+    }
+
+
 }
 

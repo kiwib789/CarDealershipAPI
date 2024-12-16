@@ -3,17 +3,20 @@ package com.pluralsight.dealership.CarDealershipAPI;
 import com.pluralsight.dealership.SalesContract;
 import com.pluralsight.dealership.dao.SalesContractDaoImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 
+@RestController
+@RequestMapping (path = "/sales")
 public class SalesContractsController {
     @Autowired
-    private SalesContractDaoImpl salesContractService;
+    private final SalesContractDaoImpl salesContractService;
+
+    public SalesContractsController(SalesContractDaoImpl salesContractService) {
+        this.salesContractService = salesContractService;
+    }
 
     @GetMapping("/{id}")
-    public SalesContract getSalesContract(@PathVariable int id) {
+    public SalesContract getSalesContractByVin(@PathVariable int id) {
         return salesContractService.findSalesContractById(id);
     }
 
