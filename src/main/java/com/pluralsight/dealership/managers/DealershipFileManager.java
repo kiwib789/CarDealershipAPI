@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class DealershipFileManager {
     private static final String filePath = "src/main/resources/inventory.csv";
 
-    static Dealership getDealership(String file) {
+    public static Dealership getDealership(String file) {
         Dealership dealership = null;
         ArrayList<Vehicle> vehicles = new ArrayList<>();
 
